@@ -7,6 +7,6 @@ A machine that can make some sound :p
 * ~~Add native closing functionality~~       
 * ~~Add keyboard functionality~~  
 * ~~Random sound generator~~
-* Add settings menu
+* ~~Add settings menu~~
 * Give user option to disable keyboard functionality
 * Make installation setup  
