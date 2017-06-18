@@ -109,7 +109,7 @@ body {
 }
 
 .about {
-    background: transparent url('../img/settings.png') no-repeat 4px 4px;
+    background: transparent url('../img/about.png') no-repeat 4px 4px;
     background-size: 24px 24px;
     right: 70px;
 }

@@ -10,7 +10,7 @@ var mainWindow = null;
 app.on('ready', function() {
     
     if (!configuration.readSettings('shortcutKeys')) {
-        configuration.saveSettings('shortcutKeys', ['ctrl', 'shift']);
+        configuration.saveSettings('shortcutKeys', ['ctrl', 'shift', 'space']);
     }
     
     mainWindow = new BrowserWindow({
