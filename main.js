@@ -15,6 +15,14 @@ app.on('ready', function() {
     });
 
     mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
+    
+    var globalShortcut = require('global-shortcut');
+    globalShortcut.register('ctrl+shift+1', function () {
+            mainWindow.webContents.send('global-shortcut', 0);
+    });
+    globalShortcut.register('ctrl+shift+2', function () {
+        mainWindow.webContents.send('global-shortcut', 1);
+    });
 });
 
 var ipc = require('ipc');
@@ -22,3 +30,5 @@ var ipc = require('ipc');
 ipc.on('close-main-window', function () {
     app.quit();
 });
+
+
