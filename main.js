@@ -1,9 +1,9 @@
-
 'use strict';
 
 var app = require('app');
 var BrowserWindow = require('browser-window');
 var configuration = require('./configuration');
+var globalShortcut = require('global-shortcut');
 
 var mainWindow = null;
 
@@ -21,6 +21,9 @@ app.on('ready', function() {
     });
 
     mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
+    globalShortcut.register('space', function () {
+        mainWindow.webContents.send('global-shortcut', (Math.floor((Math.random() * 2) + 1)-1));
+    });
     setGlobalShortcuts(); 
 });
 
@@ -32,7 +35,11 @@ ipc.on('close-main-window', function () {
 
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
-
+    
+    globalShortcut.register('space', function () {
+        mainWindow.webContents.send('global-shortcut', (Math.floor((Math.random() * 2) + 1)-1));
+    });
+    
     var shortcutKeysSetting = configuration.readSettings('shortcutKeys');
     var shortcutPrefix = shortcutKeysSetting.length === 0 ? '' : shortcutKeysSetting.join('+') + '+';
     
@@ -75,4 +82,8 @@ ipc.on('close-settings-window', function () {
     if (settingsWindow) {
         settingsWindow.close();
     }
+});
+
+ipc.on('set-global-shortcuts', function () {
+    setGlobalShortcuts();
 });
