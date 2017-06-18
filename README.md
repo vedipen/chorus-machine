@@ -6,4 +6,5 @@ A machine that can make some sound :p
 * ~~Add sounds~~     
 * ~~Add native closing functionality~~       
 * Add keyboard functionality  
+* Random sound generator
 * Make installation setup  
