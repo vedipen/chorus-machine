@@ -17,7 +17,7 @@ app.on('ready', function() {
     mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
 });
 
-ar ipc = require('ipc');
+var ipc = require('ipc');
 
 ipc.on('close-main-window', function () {
     app.quit();
