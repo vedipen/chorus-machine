@@ -7,5 +7,25 @@
   },
   "devDependencies": {
     "electron-prebuilt": "^0.30.8"
-  }
+  },
+  "description": "A machine that can make some sound :p",
+  "dependencies": {
+    "electron-prebuilt": "^0.30.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedipen/chorus-machine.git"
+  },
+  "keywords": [
+    "soundmachine",
+    "radio",
+    "desktop-app",
+    "multi-platform"
+  ],
+  "author": "vedipen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vedipen/chorus-machine/issues"
+  },
+  "homepage": "https://github.com/vedipen/chorus-machine#readme"
 }
