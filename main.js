@@ -1,3 +1,4 @@
+
 'use strict';
 
 var app = require('app');
@@ -7,8 +8,10 @@ var mainWindow = null;
 
 app.on('ready', function() {
     mainWindow = new BrowserWindow({
-        height: 600,
-        width: 800
+        frame: false,
+        height: 700,
+        resizable: false,
+        width: 368
     });
 
     mainWindow.loadUrl('file://' + __dirname + '/app/index.html');

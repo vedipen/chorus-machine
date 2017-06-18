@@ -1,3 +1,3 @@
-# Accompanying repository for the Electron guide
+# Chorus Sound Machine
 
-![Sound Machine](https://rawgithub.com/bojzi/sound-machine/master/sketch/sound-machine.png)
+A machine that can make some sound :p
