@@ -1,0 +1,34 @@
+{
+  "name": "chorus_machine",
+  "version": "0.1.1",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager ./ Chorus-Sound-Machine --all --out ~/Desktop/Chorus-Sound-Machine --version 0.34.1 --overwrite --icon=./app/img/app-icon.icns"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.1",
+    "electron-prebuilt": "^0.34.1"
+  },
+  "description": "A machine that can make some sound :p",
+  "dependencies": {
+    "electron-prebuilt": "^0.34.1",
+    "nconf": "^0.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedipen/chorus-machine.git"
+  },
+  "keywords": [
+    "soundmachine",
+    "radio",
+    "desktop-app",
+    "multi-platform"
+  ],
+  "author": "vedipen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vedipen/chorus-machine/issues"
+  },
+  "homepage": "https://github.com/vedipen/chorus-machine#readme"
+}
