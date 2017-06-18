@@ -23,6 +23,10 @@ app.on('ready', function() {
     globalShortcut.register('ctrl+shift+2', function () {
         mainWindow.webContents.send('global-shortcut', 1);
     });
+    globalShortcut.register('space', function () {
+        var random = Math.floor((Math.random() * 2) + 1);
+        mainWindow.webContents.send('global-shortcut', random);
+    });
 });
 
 var ipc = require('ipc');
