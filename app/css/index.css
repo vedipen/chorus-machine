@@ -88,7 +88,7 @@ body {
     -webkit-app-region: no-drag;
 }
 
-.settings,
+.about,.settings,
 .close {
     cursor: pointer;
     display: inline-block;
@@ -106,6 +106,12 @@ body {
     background: transparent url('../img/settings.png') no-repeat 4px 4px;
     background-size: 24px 24px;
     right: 38px;
+}
+
+.about {
+    background: transparent url('../img/settings.png') no-repeat 4px 4px;
+    background-size: 24px 24px;
+    right: 70px;
 }
 
 .close {

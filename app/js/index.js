@@ -33,3 +33,7 @@ var settingsEl = document.querySelector('.settings');
 settingsEl.addEventListener('click', function () {
     ipc.send('open-settings-window');
 });
+var aboutEl = document.querySelector('.about');
+aboutEl.addEventListener('click', function () {
+    ipc.send('open-about-window');
+});

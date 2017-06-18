@@ -10,7 +10,6 @@ closeEl.addEventListener('click', function (e) {
 var configuration = require('../configuration.js');
 
 var modifierCheckboxes = document.querySelectorAll('.global-shortcut');
-
 for (var i = 0; i < modifierCheckboxes.length; i++) {
     var shortcutKeys = configuration.readSettings('shortcutKeys');
     var modifierKey = modifierCheckboxes[i].attributes['data-modifier-key'].value;
@@ -24,7 +23,6 @@ for (var i = 0; i < modifierCheckboxes.length; i++) {
 function bindModifierCheckboxes(e) {
     var shortcutKeys = configuration.readSettings('shortcutKeys');
     var modifierKey = e.target.attributes['data-modifier-key'].value;
-
     if (shortcutKeys.indexOf(modifierKey) !== -1) {
         var shortcutKeyIndex = shortcutKeys.indexOf(modifierKey);
         shortcutKeys.splice(shortcutKeyIndex, 1);

@@ -21,9 +21,6 @@ app.on('ready', function() {
     });
 
     mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
-    globalShortcut.register('space', function () {
-        mainWindow.webContents.send('global-shortcut', (Math.floor((Math.random() * 2) + 1)-1));
-    });
     setGlobalShortcuts(); 
 });
 
@@ -36,13 +33,16 @@ ipc.on('close-main-window', function () {
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
     
-    globalShortcut.register('space', function () {
-        mainWindow.webContents.send('global-shortcut', (Math.floor((Math.random() * 2) + 1)-1));
-    });
-    
     var shortcutKeysSetting = configuration.readSettings('shortcutKeys');
     var shortcutPrefix = shortcutKeysSetting.length === 0 ? '' : shortcutKeysSetting.join('+') + '+';
     
+    if(shortcutPrefix.search(/space/) !== -1) {
+        shortcutPrefix = shortcutPrefix.replace(/space\+/,"");
+        globalShortcut.register('space', function () {
+            mainWindow.webContents.send('global-shortcut', (Math.floor((Math.random() * 2))));
+        });
+    }
+
     globalShortcut.register(shortcutPrefix + '1', function () {
         mainWindow.webContents.send('global-shortcut', 0);
     });
@@ -51,8 +51,6 @@ function setGlobalShortcuts() {
         mainWindow.webContents.send('global-shortcut', 1);
     });
 }
-
-
 
 var settingsWindow = null;
 
@@ -63,7 +61,7 @@ ipc.on('open-settings-window', function () {
 
     settingsWindow = new BrowserWindow({
         frame: false,
-        height: 200,
+        height: 250,
         resizable: false,
         width: 200
     });
@@ -73,11 +71,8 @@ ipc.on('open-settings-window', function () {
     settingsWindow.on('closed', function () {
         settingsWindow = null;
     });
-});ipc.on('close-settings-window', function () {
-    if (settingsWindow) {
-        settingsWindow.close();
-    }
 });
+
 ipc.on('close-settings-window', function () {
     if (settingsWindow) {
         settingsWindow.close();
@@ -87,3 +82,33 @@ ipc.on('close-settings-window', function () {
 ipc.on('set-global-shortcuts', function () {
     setGlobalShortcuts();
 });
+
+
+var aboutWindow = null;
+
+ipc.on('open-about-window', function () {
+    if (aboutWindow) {
+        return;
+    }
+
+    aboutWindow = new BrowserWindow({
+        frame: false,
+        height: 200,
+        resizable: false,
+        width: 200
+    });
+
+    aboutWindow.loadUrl('file://' + __dirname + '/app/about.html');
+
+    aboutWindow.on('closed', function () {
+        aboutWindow = null;
+    });
+});
+
+ipc.on('close-about-window', function () {
+    if (aboutWindow) {
+        aboutWindow.close();
+    }
+});
+
+

@@ -1,4 +1,3 @@
-
 'use strict';
 
 var nconf = require('nconf').file({file: getUserHome() + '/chorus-machine-config.json'});
