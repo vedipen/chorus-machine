@@ -8,5 +8,8 @@ A machine that can make some sound :p
 * ~~Add keyboard functionality~~  
 * ~~Random sound generator~~
 * ~~Add settings menu~~
-* Give user option to disable keyboard functionality
+* ~~Give user option to disable keyboard functionality~~
+* ~~Give option to select shortcuts~~
+* Give notifications
+* Show in menu bar
 * Make installation setup  
