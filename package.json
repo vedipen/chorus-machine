@@ -1,11 +1,11 @@
 {
-  "name": "sound_machine",
-  "version": "0.1.0",
+  "name": "chorus_machine",
+  "version": "0.0.1",
   "main": "./main.js",
   "scripts": {
     "start": "electron ."
   },
   "devDependencies": {
-    "electron-prebuilt": "^0.30.3"
+    "electron-prebuilt": "^0.30.8"
   }
 }
