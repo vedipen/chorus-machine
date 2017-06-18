@@ -10,7 +10,8 @@
   },
   "description": "A machine that can make some sound :p",
   "dependencies": {
-    "electron-prebuilt": "^0.30.8"
+    "electron-prebuilt": "^0.30.8",
+    "nconf": "^0.8.4"
   },
   "repository": {
     "type": "git",
