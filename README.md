@@ -2,4 +2,4 @@
 
 A machine that can make some sound :p
 
-This is the release for darwin x64. Download and run.
+This is the release for windows 32 ia32. Download and run.
