@@ -2,6 +2,13 @@
 
 A machine that can make some sound :p
 
+Keyboard Shortcuts - 
+* Ctrl/Alt/Shift + 1/2 for sounds
+* Space for random play
+
+Sounds and Icons source - Google  
+Installation packages of different platforms are in rest of the branches.      
+
 ### Todo - 
 * ~~Add sounds~~     
 * ~~Add native closing functionality~~       
