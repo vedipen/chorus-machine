@@ -10,6 +10,6 @@ A machine that can make some sound :p
 * ~~Add settings menu~~
 * ~~Give user option to disable keyboard functionality~~
 * ~~Give option to select shortcuts~~
-* Give notifications
-* Show in menu bar
-* Make installation setup  
+* Give system notifications
+* ~~Show in menu bar~~
+* ~~Make installation packages~~ 
